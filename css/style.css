@@ -47,7 +47,6 @@ html {
     background-color: white;
     padding: 30px 0;
     margin-bottom: 60px;
-    margin-top: 60px;
 }
 #index .index-list {
     margin-left: 20px;
@@ -78,7 +77,9 @@ html {
   }
   #detail .content dl {
     display: flex;
+    /* 要素を横並びにする */
     flex-wrap: wrap;
+    /* 要素を折り返して表示する */
     padding: 16px 0;
     margin-bottom: 25px;
     border-top: solid 1px #dedede;
@@ -86,13 +87,63 @@ html {
   }
   #detail .content dt {
     width: 25%;
+    /* 要素を4分割している */
   } 
   #detail .content dd {
     width: 75%;
+    /* 4分割した要素の右側を使っている */
   }
   #detail .content .link {
     color: #333;
   }
   #detail .content .link:hover {
     opacity: 0.8;
+  }
+
+  /* footer */
+
+  #footer {
+    padding: 15px 0;
+  }
+  #footer p {
+      font-size: 0.625rem;
+  }
+
+  /* レスポンシブ */
+  @media screen and (max-width: 1024px) {
+    .inner {
+      padding: 0 40px;
+    }
+  
+    /*-------------------------------------------
+    ヘッダー
+    -------------------------------------------*/
+    #site-title {
+      padding: 0 10px;
+    }
+  
+    /*-------------------------------------------
+    Mainvisual
+    -------------------------------------------*/
+    #main-visual {
+      margin: 0 10px 60px 10px ;
+    }
+    #main-visual img {
+        width: 100%;
+    }
+    
+    #index .index-list li {
+        line-height: 20px;
+        margin-top: 20px;
+    }
+    /*-------------------------------------------
+    Detail
+    -------------------------------------------*/
+    #detail .content {
+      flex-direction: column;
+    }
+    #detail .content .img {
+      width: 100%;
+      margin: 0 0 25px 0;
+    }
   }
